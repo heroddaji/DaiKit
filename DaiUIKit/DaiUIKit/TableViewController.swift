@@ -47,7 +47,7 @@ class TableViewController: UITableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }else if uiElements[indexPath.row] == uiElements[1]{
             var vc = FloatingMenuViewController()
-            vc.view.backgroundColor = UIColor.blueColor()
+            vc.view.backgroundColor = UIColor.whiteColor()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

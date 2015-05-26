@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DKFloatingControl: UIButton {
+class DKFloatingMenu: UIButton {
     
     enum Direction {
         case Left
@@ -33,19 +33,17 @@ class DKFloatingControl: UIButton {
         initView()
     }
     
-    func initView(){
+    func initView(){        
         let tapGesture = UITapGestureRecognizer(target: self, action: "respondsToTap:")
         self.addGestureRecognizer(tapGesture)
-        //   self.addTarget(self, action: "respondsToTap", forControlEvents: UIControlEvents.TouchUpInside)
-        
     }
     
     override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
         //tip: found this trick on https://developer.apple.com/library/ios/qa/qa2013/qa1812.html
         if isOpen{
             for anyobj in self.subviews {
-                if anyobj is DKFloatingControlItem{
-                    let view = anyobj as! DKFloatingControlItem
+                if anyobj is DKFloatingMenuItem{
+                    let view = anyobj as! DKFloatingMenuItem
                     let pointForSubView = view.convertPoint(point, fromView: self)
                     
                     if CGRectContainsPoint(view.bounds, pointForSubView){
@@ -60,20 +58,16 @@ class DKFloatingControl: UIButton {
         
     }
     
-    func addFloatingItem(floatingItem: DKFloatingControlItem){
+    func addFloatingItem(floatingItem: DKFloatingMenuItem){
+        floatingItem.frame = self.bounds
         floatingItem.userInteractionEnabled = true
         floatingItem.alpha = 0
         floatingItem.hidden = true
         self.addSubview(floatingItem)
     }
+ 
     
-    func floatingMenuTap(sender: DKFloatingControlItem){
-        NSLog("haha")
-    }
-    
-    func respondsToTap(sender: UITapGestureRecognizer){
-        NSLog("tap tap")
-        
+    func respondsToTap(sender: UITapGestureRecognizer){        
         if isOpen == true{
             isOpen = false
         }else{
@@ -117,10 +111,9 @@ class DKFloatingControl: UIButton {
         let animation = { [weak self]() -> Void in
             var index:CGFloat = 1
             for anyobj in self!.subviews {
-                if isOpen && anyobj is DKFloatingControlItem{
+                if isOpen && anyobj is DKFloatingMenuItem{
                     let translationTransform =  openTranslationBlock(self!.direction,index)
-                    let view = anyobj as! DKFloatingControlItem
-                    NSLog("subview frame:\(view.frame)")
+                    let view = anyobj as! DKFloatingMenuItem
                     view.hidden = false
                     view.alpha =  1
                     view.transform  = translationTransform

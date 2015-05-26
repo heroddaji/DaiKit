@@ -13,8 +13,8 @@
 		F8C6C38F1B143225006D7058 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C38D1B143225006D7058 /* LaunchScreen.xib */; };
 		F8C6C39B1B143225006D7058 /* DaiUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C39A1B143225006D7058 /* DaiUIKitTests.swift */; };
 		F8C6C3C31B14344D006D7058 /* DKDraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3BD1B14344D006D7058 /* DKDraggableView.swift */; };
-		F8C6C3C41B14344D006D7058 /* DKFloatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3BF1B14344D006D7058 /* DKFloatingControl.swift */; };
-		F8C6C3C51B14344D006D7058 /* DKFloatingControlItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3C01B14344D006D7058 /* DKFloatingControlItem.swift */; };
+		F8C6C3C41B14344D006D7058 /* DKFloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3BF1B14344D006D7058 /* DKFloatingMenu.swift */; };
+		F8C6C3C51B14344D006D7058 /* DKFloatingMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3C01B14344D006D7058 /* DKFloatingMenuItem.swift */; };
 		F8C6C3C61B14344D006D7058 /* DKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3C21B14344D006D7058 /* DKHelper.swift */; };
 		F8C6C3CD1B14350D006D7058 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3CC1B14350D006D7058 /* TableViewController.swift */; };
 		F8C6C3CF1B14364B006D7058 /* DraggableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C3CE1B14364B006D7058 /* DraggableViewController.swift */; };
@@ -42,8 +42,8 @@
 		F8C6C3991B143225006D7058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C6C39A1B143225006D7058 /* DaiUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaiUIKitTests.swift; sourceTree = "<group>"; };
 		F8C6C3BD1B14344D006D7058 /* DKDraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKDraggableView.swift; sourceTree = "<group>"; };
-		F8C6C3BF1B14344D006D7058 /* DKFloatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKFloatingControl.swift; sourceTree = "<group>"; };
-		F8C6C3C01B14344D006D7058 /* DKFloatingControlItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKFloatingControlItem.swift; sourceTree = "<group>"; };
+		F8C6C3BF1B14344D006D7058 /* DKFloatingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKFloatingMenu.swift; sourceTree = "<group>"; };
+		F8C6C3C01B14344D006D7058 /* DKFloatingMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKFloatingMenuItem.swift; sourceTree = "<group>"; };
 		F8C6C3C21B14344D006D7058 /* DKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHelper.swift; sourceTree = "<group>"; };
 		F8C6C3CC1B14350D006D7058 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F8C6C3CE1B14364B006D7058 /* DraggableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		F8C6C3BE1B14344D006D7058 /* floatingControl */ = {
 			isa = PBXGroup;
 			children = (
-				F8C6C3BF1B14344D006D7058 /* DKFloatingControl.swift */,
-				F8C6C3C01B14344D006D7058 /* DKFloatingControlItem.swift */,
+				F8C6C3BF1B14344D006D7058 /* DKFloatingMenu.swift */,
+				F8C6C3C01B14344D006D7058 /* DKFloatingMenuItem.swift */,
 			);
 			path = floatingControl;
 			sourceTree = "<group>";
@@ -273,9 +273,9 @@
 				F8C6C3C61B14344D006D7058 /* DKHelper.swift in Sources */,
 				F8C6C3CD1B14350D006D7058 /* TableViewController.swift in Sources */,
 				F8C6C3C31B14344D006D7058 /* DKDraggableView.swift in Sources */,
-				F8C6C3C41B14344D006D7058 /* DKFloatingControl.swift in Sources */,
+				F8C6C3C41B14344D006D7058 /* DKFloatingMenu.swift in Sources */,
 				F8C6C3851B143225006D7058 /* AppDelegate.swift in Sources */,
-				F8C6C3C51B14344D006D7058 /* DKFloatingControlItem.swift in Sources */,
+				F8C6C3C51B14344D006D7058 /* DKFloatingMenuItem.swift in Sources */,
 				F8C6C3D11B14373A006D7058 /* FloatingMenuViewController.swift in Sources */,
 				F8C6C3CF1B14364B006D7058 /* DraggableViewController.swift in Sources */,
 			);
